@@ -4,52 +4,60 @@
 <!-- INPUT SECTION -->
   <section class="left-section column has-background-white-ter is-5 p-5">
     <div class="title">Specifications</div>
-    <form class="is-flex-direction-column">
-      
-      <div class="field is-horizontal">
-        <div class="field-label is-normal">
-          <label class="label">Floor area <span class="has-text-grey-light">(m<sup>2</sup>)</span></label>
-        </div>
-          <div class="field">
-            <div class="control">
-              <input type="number" step="0.1" min="1" max="999.9" class="input" required />
-            </div>
-          </div>
-      </div>
+    <form class="">
+      <div class="flex-parent is-flex is-flex-direction-column">
 
-      <div class="field is-horizontal">
-        <div class="field-label is-normal">
-          <label class="label">Heated area <span class="has-text-grey-light">(m<sup>2</sup>)</span></label>
-        </div>
-          <div class="field">
-            <div class="control">
-              <input type="number" step="0.1" min="1" max="999.9" class="input" required />
-            </div>
+        <div class="field is-horizontal">
+          <div class="field-label is-normal">
+            <label class="label">Floor area <span class="has-text-grey-light">(m<sup>2</sup>)</span></label>
           </div>
-      </div>
-
-      <div class="field is-horizontal">
-        <div class="field-label is-normal">
-          <label class="label">Floor substrate</label>
-        </div>
-          <div class="field">
-            <div class="control">
-              <div class="select is-multiple">
-                <select multiple required size="2">
-                  <option value="Concrete">Concrete</option>
-                  <option value="Timber">Timber</option>
-                </select>
+            <div class="field">
+              <div class="control">
+                <input type="number" step="0.1" min="1" max="999.9" class="input" required />
               </div>
             </div>
+        </div>
+  
+        <div class="field is-horizontal">
+          <div class="field-label is-normal">
+            <label class="label">Heated area <span class="has-text-grey-light">(m<sup>2</sup>)</span></label>
           </div>
-      </div>
+            <div class="field">
+              <div class="control">
+                <input type="number" step="0.1" min="1" max="999.9" class="input" required />
+              </div>
+            </div>
+        </div>
+  
+        <div class="field is-horizontal">
+          <div class="field-label is-normal">
+            <label class="label">Floor substrate</label>
+          </div>
+            <div class="field">
+              <div class="control">
+                <div class="select is-multiple">
+                  <select multiple required size="2">
+                    <option value="Concrete">Concrete</option>
+                    <option value="Timber">Timber</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+        </div>
+  
+        <div class="field is-align-self-flex-end">
+          <div class="control">
+            <button class="button is-primary">Calculate!</button>
+          </div>
+        </div>
 
+      </div>
     </form>
   </section>
 
 <!-- OUTPUT SECTION -->
   <section class="right-section column has-background-white-bis p-5">
-    <div class="title">Quote</div>
+    <div class="title">Quotation</div>
 
     <div class="output-section block p-2">
       <p class="is-size-">Insulation:</p>
