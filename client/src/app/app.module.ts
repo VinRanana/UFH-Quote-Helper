@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { RoomComponent } from './room/room.component';
 import { MainComponent } from './main/main.component';
 import { OutputLineComponent } from './output-line/output-line.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { OutputLineComponent } from './output-line/output-line.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
