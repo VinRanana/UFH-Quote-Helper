@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Mesh, MeshCollection, MESH_OBJ, randomMeshStr } from '../data/mesh-data';
 
 @Component({
   selector: 'app-room',
@@ -7,8 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RoomComponent implements OnInit {
 
+  randomMeshStr = randomMeshStr
+  
   constructor() { }
-
+  
   ngOnInit(): void {
   }
 

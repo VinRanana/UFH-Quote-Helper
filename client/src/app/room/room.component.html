@@ -6,7 +6,7 @@
     <div class="title">Specifications</div>
     <form class="">
       <div class="flex-parent is-flex is-flex-direction-column">
-
+        <!-- floor area input -->
         <div class="field is-horizontal">
           <div class="field-label is-normal">
             <label class="label">Floor area <span class="has-text-grey-light">(m<sup>2</sup>)</span></label>
@@ -17,7 +17,7 @@
               </div>
             </div>
         </div>
-  
+        <!-- heated area input -->
         <div class="field is-horizontal">
           <div class="field-label is-normal">
             <label class="label">Heated area <span class="has-text-grey-light">(m<sup>2</sup>)</span></label>
@@ -28,7 +28,7 @@
               </div>
             </div>
         </div>
-  
+        <!-- substrate input -->
         <div class="field is-horizontal">
           <div class="field-label is-normal">
             <label class="label">Floor substrate</label>
@@ -44,7 +44,7 @@
               </div>
             </div>
         </div>
-  
+        <!-- submit button -->
         <div class="field is-align-self-flex-end">
           <div class="control">
             <button class="button is-primary">Calculate!</button>
@@ -62,6 +62,7 @@
     <div class="output-section block p-2">
       <p class="is-size-">Insulation:</p>
       <app-output-line></app-output-line>
+      <h2>{{randomMeshStr}}</h2>
       <app-output-line></app-output-line>
     </div>
     <div class="output-section block p-2">
