@@ -31,7 +31,7 @@ export const MESH_OBJ = mesh150Areas.reduce((resultObj: MeshCollection, mSquared
 
 function generateRandomMeshStr (meshObject: MeshCollection): string {
   const keys = Object.keys(meshObject);
-  return meshObject[keys[ keys.length * Math.random() << 0]].name;
+  return meshObject[keys[ Math.floor(keys.length * Math.random())]].name;
 };
 
 export const randomMeshStr = generateRandomMeshStr(MESH_OBJ);
