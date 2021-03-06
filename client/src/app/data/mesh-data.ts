@@ -4,7 +4,7 @@ export interface Mesh {
   intensity: number;
 }
 
-export interface MeshCollection {
+interface MeshCollection {
   [key: string]: Mesh;
 }
 
@@ -28,10 +28,30 @@ export const MESH_OBJ = mesh150Areas.reduce((resultObj: MeshCollection, mSquared
   return resultObj;
 }, {});
 
+export function determineRightMesh (meshObject: MeshCollection, heatedArea: number): string {
+  let bestFit: Mesh = {
+    name: 'placeholder',
+    area: 0,
+    intensity: 0,
+  };
+  
+  for (const key in meshObject) {
+    if (Object.prototype.hasOwnProperty.call(meshObject, key)) {
+      const currentMesh = meshObject[key]
+      const meshArea = currentMesh.area;
+      
+      if (meshArea > heatedArea) continue;
+      if (meshArea === heatedArea) return currentMesh.name;
+      if (bestFit && currentMesh.area > bestFit.area) bestFit = currentMesh;
+    }
+  }
+  return bestFit.name;
+}
 
-function generateRandomMeshStr (meshObject: MeshCollection): string {
-  const keys = Object.keys(meshObject);
-  return meshObject[keys[ Math.floor(keys.length * Math.random())]].name;
-};
 
-export const randomMeshStr = generateRandomMeshStr(MESH_OBJ);
+// function generateRandomMeshStr (meshObject: MeshCollection): string {
+//   const keys = Object.keys(meshObject);
+//   return meshObject[keys[ Math.floor(keys.length * Math.random())]].name;
+// };
+
+// export const randomMeshStr = generateRandomMeshStr(MESH_OBJ);

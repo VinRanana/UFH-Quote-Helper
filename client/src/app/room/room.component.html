@@ -61,18 +61,15 @@
 
     <div class="output-section block p-2">
       <p class="is-size-">Insulation:</p>
-      <app-output-line></app-output-line>
-      <h2 *ngIf="inputData?.floorArea > 0">Floor area: {{inputData?.floorArea}}</h2>
+      <!-- <h2 *ngIf="inputData?.floorArea > 0">Floor area: {{inputData?.floorArea}}</h2>
       <h2 *ngIf="inputData?.heatedArea > 0">Heated area: {{inputData?.heatedArea}}</h2>
-      <h2 *ngIf="inputData?.floorSubstrate?.length > 0">Floor substrate: {{inputData?.floorSubstrate}}</h2>
-      <h2 *ngIf="inputData?.heatedArea > 0">Mesh: <span class="is-uppercase">{{resultMesh}}</span></h2>
-      <!-- <h2>{{randomHeatedArea}}m<sup>2</sup></h2>
-      <h2>{{resultMesh}}</h2> -->
-      <app-output-line></app-output-line>
+      <h2 *ngIf="inputData?.floorSubstrate?.length > 0">Floor substrate: {{inputData?.floorSubstrate}}</h2> -->
     </div>
     <div class="output-section block p-2">
       <p>Heating:</p>
-      <app-output-line></app-output-line>
+      <div *ngIf="inputData?.heatedArea > 0">
+        <app-output-line [mesh]="resultMesh"></app-output-line>
+      </div>
     </div>
   </section>
 

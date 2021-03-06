@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-output-line',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./output-line.component.sass']
 })
 export class OutputLineComponent implements OnInit {
+
+  @Input() mesh: string;
 
   constructor() { }
 
