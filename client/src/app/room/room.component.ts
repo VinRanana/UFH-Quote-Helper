@@ -25,7 +25,7 @@ export class RoomComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onSubmit(value: any){
+  onSubmit (value: any): void {
     console.log('input value', value);
 
     this.inputData.floorArea = value['floor-area'];

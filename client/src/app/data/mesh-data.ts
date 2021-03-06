@@ -17,7 +17,7 @@ function createMesh (name: string, area: number, intensity: number): Mesh {
     area,
     intensity,
   }
-};
+}
 
 export const MESH_OBJ = mesh150Areas.reduce((resultObj: MeshCollection, mSquared: number): MeshCollection => {
   const mSquared100 = mSquared * 100;
@@ -37,7 +37,7 @@ export function determineRightMesh (meshObject: MeshCollection, heatedArea: numb
   
   for (const key in meshObject) {
     if (Object.prototype.hasOwnProperty.call(meshObject, key)) {
-      const currentMesh = meshObject[key]
+      const currentMesh = meshObject[key];
       const meshArea = currentMesh.area;
       
       if (meshArea > heatedArea) continue;
