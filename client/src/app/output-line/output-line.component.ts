@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import * as copy from 'copy-to-clipboard';
+import { Mesh } from '../data/mesh-data';
 
 @Component({
   selector: 'app-output-line',
@@ -8,7 +9,7 @@ import * as copy from 'copy-to-clipboard';
 })
 export class OutputLineComponent implements OnInit {
 
-  @Input() mesh: string;
+  @Input() mesh: Mesh;
 
   constructor() { }
 
@@ -16,6 +17,6 @@ export class OutputLineComponent implements OnInit {
   }
 
   onClick (): void {
-    copy(this.mesh);
+    copy(this.mesh.name);
   }
 }

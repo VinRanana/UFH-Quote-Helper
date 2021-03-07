@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { calculateQuantity } from '../data/insulation-data';
-import { determineRightMesh, MESH_OBJ } from '../data/mesh-data';
+import { determineRightMesh, Mesh, MESH_OBJ } from '../data/mesh-data';
 import { InputData } from '../inputData.model';
 
 @Component({
@@ -19,7 +19,7 @@ export class RoomComponent implements OnInit {
     floorSubstrate: ''
   };
   
-  resultMesh: string;
+  resultMesh: Mesh;
   
   constructor() { }
   

@@ -28,7 +28,7 @@ export const MESH_OBJ = mesh150Areas.reduce((resultObj: MeshCollection, mSquared
   return resultObj;
 }, {});
 
-export function determineRightMesh (meshObject: MeshCollection, heatedArea: number): string {
+export function determineRightMesh (meshObject: MeshCollection, heatedArea: number): Mesh {
   let bestFit: Mesh = {
     name: 'placeholder',
     area: 0,
@@ -41,11 +41,11 @@ export function determineRightMesh (meshObject: MeshCollection, heatedArea: numb
       const meshArea = currentMesh.area;
       
       if (meshArea > heatedArea) continue;
-      if (meshArea === heatedArea) return currentMesh.name;
-      if (bestFit && currentMesh.area > bestFit.area) bestFit = currentMesh;
+      if (meshArea === heatedArea) return currentMesh;
+      if (currentMesh.area > bestFit.area) bestFit = currentMesh;
     }
   }
-  return bestFit.name;
+  return bestFit;
 }
 
 
