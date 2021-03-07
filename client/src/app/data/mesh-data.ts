@@ -21,7 +21,7 @@ function createMesh (name: string, area: number, intensity: number): Mesh {
 
 export const MESH_OBJ = mesh150Areas.reduce((resultObj: MeshCollection, mSquared: number): MeshCollection => {
   const mSquared100 = mSquared * 100;
-  const naming = (mSquared < 10) ? `tsm_150_0${mSquared100}` : `tsm_150_${mSquared100}`;
+  const naming = (mSquared < 10) ? `TSM-150-0${mSquared100}` : `TSM-150-${mSquared100}`;
 
   resultObj[naming] = createMesh(naming, mSquared, 150);
 

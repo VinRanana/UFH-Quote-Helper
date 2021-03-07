@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { InputData } from '../inputData.model';
 
 @Component({
   selector: 'app-output-section',
@@ -6,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./output-section.component.sass']
 })
 export class OutputSectionComponent implements OnInit {
+
+  @Input() inputData: InputData;
+  @Input() resultMesh: string;
 
   constructor() { }
 
