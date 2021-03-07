@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { calculateQuantity } from '../data/insulation-data';
 import { determineRightMesh, Mesh, MESH_OBJ } from '../data/mesh-data';
 import { InputData } from '../input-data.model';
+import { OutputItem } from '../output-item.model';
 
 @Component({
   selector: 'app-room',
@@ -19,7 +20,7 @@ export class RoomComponent implements OnInit {
     floorSubstrate: ''
   };
   
-  resultMesh: Mesh;
+  resultMesh: OutputItem;
   
   constructor() { }
   

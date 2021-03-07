@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import * as copy from 'copy-to-clipboard';
-import { Mesh } from '../data/mesh-data';
+import { OutputItem } from '../output-item.model';
 
 @Component({
   selector: 'app-output-line',
@@ -9,8 +9,7 @@ import { Mesh } from '../data/mesh-data';
 })
 export class OutputLineComponent implements OnInit {
 
-  @Input() item: Mesh;
-  quantity = '1';
+  @Input() item: OutputItem;
 
   constructor() { }
 

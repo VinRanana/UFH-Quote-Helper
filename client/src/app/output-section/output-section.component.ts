@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Mesh } from '../data/mesh-data';
 import { InputData } from '../input-data.model';
+import { OutputItem } from '../output-item.model';
 
 @Component({
   selector: 'app-output-section',
@@ -10,7 +11,7 @@ import { InputData } from '../input-data.model';
 export class OutputSectionComponent implements OnInit {
 
   @Input() inputData: InputData;
-  @Input() resultMesh: Mesh;
+  @Input() resultMesh: OutputItem;
 
   constructor() { }
 
