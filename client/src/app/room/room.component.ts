@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { calculateQuantity } from '../data/insulation-data';
 import { determineRightMesh, MESH_OBJ } from '../data/mesh-data';
 import { InputData } from '../inputData.model';
 
@@ -12,13 +13,13 @@ export class RoomComponent implements OnInit {
   // randomMeshStr = randomMeshStr;
   // meshObj = JSON.stringify(MESH_OBJ);
 
-  resultMesh: string;
-
   inputData: InputData = {
     floorArea: 0,
     heatedArea: 0,
     floorSubstrate: ''
   };
+  
+  resultMesh: string;
   
   constructor() { }
   
@@ -28,10 +29,7 @@ export class RoomComponent implements OnInit {
   updateData (value: InputData): void {
     this.inputData = value;
     this.inputData.floorSubstrate = value['floorSubstrate'][0];
-    
     this.resultMesh = determineRightMesh(MESH_OBJ, this.inputData.heatedArea);
-  
-    console.log('inputData', this.inputData);
   }
 
 }
