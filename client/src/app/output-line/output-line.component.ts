@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import * as copy from 'copy-to-clipboard';
 
 @Component({
   selector: 'app-output-line',
@@ -14,4 +15,7 @@ export class OutputLineComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onClick (): void {
+    copy(this.mesh);
+  }
 }
