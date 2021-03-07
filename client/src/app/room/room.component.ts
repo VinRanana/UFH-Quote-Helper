@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MESH_OBJ, determineRightMesh } from '../data/mesh-data';
+import { determineRightMesh, MESH_OBJ } from '../data/mesh-data';
 import { InputData } from '../inputData.model';
 
 @Component({
@@ -25,14 +25,12 @@ export class RoomComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onSubmit (value: any): void {
-    console.log('input value', value);
-
-    this.inputData.floorArea = value['floor-area'];
-    this.inputData.heatedArea = value['heated-area'];
-    this.inputData.floorSubstrate = value['floor-substrate'][0];
+  updateData (value: InputData): void {
+    this.inputData = value;
+    this.inputData.floorSubstrate = value['floorSubstrate'][0];
+    
     this.resultMesh = determineRightMesh(MESH_OBJ, this.inputData.heatedArea);
-
+  
     console.log('inputData', this.inputData);
   }
 
