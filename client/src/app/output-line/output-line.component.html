@@ -1,8 +1,9 @@
 <!-- <p>output-line works!</p> -->
 
 <div class="columns level">
-  <div class="column">
-    <button (click)="onClick()" class="button is-light">{{mesh.name}}</button>
+  <div class="column is-3">
+    <button (click)="onClick()" class="button is-light">{{item.name}}</button>
   </div>
-  <div class="column">x1</div>
+  <div class="column is-1">x{{quantity}}</div>
+  <div class="column is-7 is-italic">{{item.description}}</div>
 </div>

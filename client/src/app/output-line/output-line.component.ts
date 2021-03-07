@@ -9,7 +9,8 @@ import { Mesh } from '../data/mesh-data';
 })
 export class OutputLineComponent implements OnInit {
 
-  @Input() mesh: Mesh;
+  @Input() item: Mesh;
+  quantity = '1';
 
   constructor() { }
 
@@ -17,6 +18,6 @@ export class OutputLineComponent implements OnInit {
   }
 
   onClick (): void {
-    copy(this.mesh.name);
+    copy(this.item.name);
   }
 }

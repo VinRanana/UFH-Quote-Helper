@@ -1,5 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { InputData } from '../inputData.model';
+import { InputData } from '../input-data.model';
 
 @Component({
   selector: 'app-input-section',

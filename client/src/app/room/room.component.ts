@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { calculateQuantity } from '../data/insulation-data';
 import { determineRightMesh, Mesh, MESH_OBJ } from '../data/mesh-data';
-import { InputData } from '../inputData.model';
+import { InputData } from '../input-data.model';
 
 @Component({
   selector: 'app-room',

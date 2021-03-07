@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Mesh } from '../data/mesh-data';
-import { InputData } from '../inputData.model';
+import { InputData } from '../input-data.model';
 
 @Component({
   selector: 'app-output-section',

@@ -2,6 +2,7 @@ export interface Mesh {
   name: string;
   area: number;
   intensity: number;
+  description: string;
 }
 
 interface MeshCollection {
@@ -11,11 +12,12 @@ interface MeshCollection {
 
 const mesh150Areas = [1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 6, 7, 8, 9, 10, 12, 14, 16, 20, 24];
 
-function createMesh (name: string, area: number, intensity: number): Mesh {
+function createMesh (name: string, area: number, intensity: number, description: string): Mesh {
   return {
     name,
     area,
     intensity,
+    description
   }
 }
 
@@ -23,7 +25,7 @@ export const MESH_OBJ = mesh150Areas.reduce((resultObj: MeshCollection, mSquared
   const mSquared100 = mSquared * 100;
   const naming = (mSquared < 10) ? `TSM-150-0${mSquared100}` : `TSM-150-${mSquared100}`;
 
-  resultObj[naming] = createMesh(naming, mSquared, 150);
+  resultObj[naming] = createMesh(naming, mSquared, 150, 'Self-adhesive mesh');
 
   return resultObj;
 }, {});
@@ -33,6 +35,7 @@ export function determineRightMesh (meshObject: MeshCollection, heatedArea: numb
     name: 'placeholder',
     area: 0,
     intensity: 0,
+    description: 'placeholder'
   };
   
   for (const key in meshObject) {
