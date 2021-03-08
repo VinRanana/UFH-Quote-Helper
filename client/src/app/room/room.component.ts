@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { calculateQuantity } from '../data/insulation-data';
-import { determineRightMesh, Mesh, MESH_OBJ } from '../data/mesh-data';
+import { determineRightMesh, MESH_OBJ } from '../data/mesh-data';
 import { InputData } from '../input-data.model';
 import { OutputItem } from '../output-item.model';
 
@@ -10,9 +10,6 @@ import { OutputItem } from '../output-item.model';
   styleUrls: ['./room.component.sass']
 })
 export class RoomComponent implements OnInit {
-  // randomHeatedArea = Math.ceil(Math.random() * 25 * 10) / 10;
-  // randomMeshStr = randomMeshStr;
-  // meshObj = JSON.stringify(MESH_OBJ);
 
   inputData: InputData = {
     floorArea: 0,
@@ -21,6 +18,8 @@ export class RoomComponent implements OnInit {
   };
   
   resultMesh: OutputItem;
+  resultFta: OutputItem;
+  resultCib: OutputItem;
   
   constructor() { }
   
@@ -31,6 +30,10 @@ export class RoomComponent implements OnInit {
     this.inputData = value;
     this.inputData.floorSubstrate = value['floorSubstrate'][0];
     this.resultMesh = determineRightMesh(MESH_OBJ, this.inputData.heatedArea);
+    this.resultFta = {name: 'FTA-20-01', quantity: 0, description: 'Flexible tile adhesive'};
+    this.resultFta.quantity = calculateQuantity('fta', value['floorArea']);
+    this.resultCib = {name: 'CIB-105-10', quantity: 0, description: 'Concrete insulation boards'};
+    this.resultCib.quantity = calculateQuantity('cib', value['floorArea']);
   }
 
 }

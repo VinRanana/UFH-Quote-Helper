@@ -1,13 +1,16 @@
 <div class="title">Quotation</div>
 <div class="output-section block p-2">
-  <p class="is-size-">Insulation:</p>
+  <p>Insulation:</p>
+  <div *ngIf="inputData?.floorArea > 0 && inputData?.floorSubstrate === 'Concrete'">
+    <app-output-line [item]="resultFta"></app-output-line>
+  </div>
+  <div *ngIf="inputData?.floorArea > 0 && inputData?.floorSubstrate === 'Concrete'">
+    <app-output-line [item]="resultCib"></app-output-line>
+  </div>
 </div>
 <div class="output-section block p-2">
   <p>Heating:</p>
   <div *ngIf="inputData?.heatedArea > 0">
     <app-output-line [item]="resultMesh"></app-output-line>
-    <!-- <h2 *ngIf="inputData?.floorArea > 0">Floor area: {{inputData?.floorArea}}</h2>
-    <h2 *ngIf="inputData?.heatedArea > 0">Heated area: {{inputData?.heatedArea}}</h2>
-    <h2 *ngIf="inputData?.floorSubstrate?.length > 0">Floor substrate: {{inputData?.floorSubstrate}}</h2> -->
   </div>
 </div>

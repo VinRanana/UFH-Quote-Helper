@@ -60,11 +60,3 @@ export function determineRightMesh (meshObject: MeshCollection, heatedArea: numb
   resultItem.name = bestFit.name;
   return resultItem;
 }
-
-
-// function generateRandomMeshStr (meshObject: MeshCollection): string {
-//   const keys = Object.keys(meshObject);
-//   return meshObject[keys[ Math.floor(keys.length * Math.random())]].name;
-// };
-
-// export const randomMeshStr = generateRandomMeshStr(MESH_OBJ);

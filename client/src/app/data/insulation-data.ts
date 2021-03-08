@@ -1,6 +1,6 @@
 const items = {
   fta: 5,
-  cib: 0.72
+  cib: 7.2
 }
 
 export function calculateQuantity (item: string, floorArea: number): number {

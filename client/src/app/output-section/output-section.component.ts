@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Mesh } from '../data/mesh-data';
 import { InputData } from '../input-data.model';
 import { OutputItem } from '../output-item.model';
 
@@ -12,6 +11,8 @@ export class OutputSectionComponent implements OnInit {
 
   @Input() inputData: InputData;
   @Input() resultMesh: OutputItem;
+  @Input() resultFta: OutputItem;
+  @Input() resultCib: OutputItem;
 
   constructor() { }
 
