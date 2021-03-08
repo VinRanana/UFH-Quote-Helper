@@ -1,8 +1,14 @@
 <!-- <p>output-line works!</p> -->
 
 <div class="level mt-1 mb-2">
-  <div class="is-flex is-justify-content-flex-start">
-    <button (click)="onClick()" class="button is-light">{{item.name}}</button>
+  <div class="is-flex">
+    <button
+      (click)="onClick()"
+      [style.border-color]="clicked ? '#EE3350' : 'none'"
+      [style.color]="clicked ? '#EE3350' : 'inherit'"
+      class="button is-light"
+      >{{item.name}}
+    </button>
     <div class="level p-2 ml-3">x{{item.quantity}}</div>
   </div>
   <div class="is-italic">{{item.description}}</div>

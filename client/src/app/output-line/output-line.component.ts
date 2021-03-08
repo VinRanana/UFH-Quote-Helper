@@ -10,6 +10,8 @@ import { OutputItem } from '../output-item.model';
 export class OutputLineComponent implements OnInit {
 
   @Input() item: OutputItem;
+  
+  clicked = false;
 
   constructor() { }
 
@@ -18,5 +20,6 @@ export class OutputLineComponent implements OnInit {
 
   onClick (): void {
     copy(this.item.name);
+    this.clicked = true;
   }
 }
