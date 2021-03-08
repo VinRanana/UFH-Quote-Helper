@@ -1,25 +1,27 @@
-<div class="title">Quotation</div>
-<div class="output-section block p-2">
-  <p>Insulation:</p>
-  <div *ngIf="inputData?.floorArea > 0 && inputData?.floorSubstrate === 'Concrete'">
-    <app-output-line [item]="resultFta"></app-output-line>
+<div class="outer-div">
+  <div class="title has-text-grey-light">Quotation</div>
+  <div class="block p-2">
+    <p>Insulation:</p>
+    <div *ngIf="inputData?.floorArea > 0 && inputData?.floorSubstrate === 'Concrete'">
+      <app-output-line [item]="resultFta"></app-output-line>
+    </div>
+    <div *ngIf="inputData?.floorArea > 0 && inputData?.floorSubstrate === 'Concrete'">
+      <app-output-line [item]="resultCib"></app-output-line>
+    </div>
+    <div *ngIf="inputData?.floorArea > 0 && inputData?.floorSubstrate === 'Timber'">
+      <app-output-line [item]="resultTib"></app-output-line>
+    </div>
+    <div *ngIf="inputData?.floorArea > 0 && inputData?.floorSubstrate === 'Timber'">
+      <app-output-line [item]="resultFs"></app-output-line>
+    </div>
+    <div *ngIf="inputData?.floorArea > 0 && inputData?.floorSubstrate === 'Timber'">
+      <app-output-line [item]="resultMfw"></app-output-line>
+    </div>
   </div>
-  <div *ngIf="inputData?.floorArea > 0 && inputData?.floorSubstrate === 'Concrete'">
-    <app-output-line [item]="resultCib"></app-output-line>
-  </div>
-  <div *ngIf="inputData?.floorArea > 0 && inputData?.floorSubstrate === 'Timber'">
-    <app-output-line [item]="resultTib"></app-output-line>
-  </div>
-  <div *ngIf="inputData?.floorArea > 0 && inputData?.floorSubstrate === 'Timber'">
-    <app-output-line [item]="resultFs"></app-output-line>
-  </div>
-  <div *ngIf="inputData?.floorArea > 0 && inputData?.floorSubstrate === 'Timber'">
-    <app-output-line [item]="resultMfw"></app-output-line>
-  </div>
-</div>
-<div class="output-section block p-2">
-  <p>Heating:</p>
-  <div *ngIf="inputData?.heatedArea > 0">
-    <app-output-line [item]="resultMesh"></app-output-line>
+  <div class="block p-2">
+    <p>Heating:</p>
+    <div *ngIf="inputData?.heatedArea > 0">
+      <app-output-line [item]="resultMesh"></app-output-line>
+    </div>
   </div>
 </div>

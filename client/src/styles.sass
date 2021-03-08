@@ -1,5 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Palanquin:wght@500&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Biryani&display=swap')
+
+h1
+  &.title
+    font-family: 'Palanquin', sans-serif
+
+.title
+  font-family: 'Open Sans', sans-serif
+
+$primary: #EC314E
+$primary-light: #fd697f
+
+// Disable the widescreen breakpoint
+$widescreen-enabled: false
+
+// Disable the fullhd breakpoint
+$fullhd-enabled: false
+
 @import '../node_modules/bulma/bulma.sass'
 
 html, body
   height: 100%
-  background-color: $grey-lighter
+  background-color: $grey-light
+  font-family: 'Biryani', sans-serif

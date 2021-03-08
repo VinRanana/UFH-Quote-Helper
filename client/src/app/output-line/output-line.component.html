@@ -1,9 +1,9 @@
 <!-- <p>output-line works!</p> -->
 
-<div class="columns level">
-  <div class="column is-3">
+<div class="level">
+  <div class="is-flex is-justify-content-flex-start">
     <button (click)="onClick()" class="button is-light">{{item.name}}</button>
+    <div class="level p-2 ml-3">x{{item.quantity}}</div>
   </div>
-  <div class="column is-1">x{{item.quantity}}</div>
-  <div class="column is-7 is-italic">{{item.description}}</div>
+  <div class="is-italic has-text-left">{{item.description}}</div>
 </div>
