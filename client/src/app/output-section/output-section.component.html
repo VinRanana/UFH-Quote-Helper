@@ -1,7 +1,7 @@
 <div class="outer-div">
-  <div class="title has-text-grey-light">Quotation</div>
+  <div class="title is-4 has-text-grey-light">Quotation</div>
   <div class="block p-2">
-    <p>Insulation:</p>
+    <p class="has-text-grey-light">Insulation:</p>
     <div *ngIf="inputData?.floorArea > 0 && inputData?.floorSubstrate === 'Concrete'">
       <app-output-line [item]="resultFta"></app-output-line>
     </div>
@@ -19,7 +19,7 @@
     </div>
   </div>
   <div class="block p-2">
-    <p>Heating:</p>
+    <p class="has-text-grey-light">Heating:</p>
     <div *ngIf="inputData?.heatedArea > 0">
       <app-output-line [item]="resultMesh"></app-output-line>
     </div>
