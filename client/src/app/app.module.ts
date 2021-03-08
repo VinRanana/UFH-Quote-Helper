@@ -9,6 +9,10 @@ import { OutputLineComponent } from './output-line/output-line.component';
 import { FormsModule } from '@angular/forms';
 import { InputSectionComponent } from './input-section/input-section.component';
 import { OutputSectionComponent } from './output-section/output-section.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { ToastrModule } from 'ngx-toastr';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +26,9 @@ import { OutputSectionComponent } from './output-section/output-section.componen
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

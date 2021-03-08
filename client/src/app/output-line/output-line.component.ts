@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import * as copy from 'copy-to-clipboard';
+import { ToastrService } from 'ngx-toastr';
 import { OutputItem } from '../output-item.model';
 
 @Component({
@@ -13,7 +14,7 @@ export class OutputLineComponent implements OnInit {
   
   clicked = false;
 
-  constructor() { }
+  constructor(private toastr: ToastrService) { }
 
   ngOnInit(): void {
   }
@@ -21,5 +22,11 @@ export class OutputLineComponent implements OnInit {
   onClick (): void {
     copy(this.item.name);
     this.clicked = true;
+    this.toastr.success(this.item.name, 'Copied to clipboard:', {
+      positionClass: 'toast-top-right',
+      easeTime: 150,
+      timeOut: 2000
+    });
   }
+
 }
