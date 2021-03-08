@@ -7,6 +7,15 @@
   <div *ngIf="inputData?.floorArea > 0 && inputData?.floorSubstrate === 'Concrete'">
     <app-output-line [item]="resultCib"></app-output-line>
   </div>
+  <div *ngIf="inputData?.floorArea > 0 && inputData?.floorSubstrate === 'Timber'">
+    <app-output-line [item]="resultTib"></app-output-line>
+  </div>
+  <div *ngIf="inputData?.floorArea > 0 && inputData?.floorSubstrate === 'Timber'">
+    <app-output-line [item]="resultFs"></app-output-line>
+  </div>
+  <div *ngIf="inputData?.floorArea > 0 && inputData?.floorSubstrate === 'Timber'">
+    <app-output-line [item]="resultMfw"></app-output-line>
+  </div>
 </div>
 <div class="output-section block p-2">
   <p>Heating:</p>

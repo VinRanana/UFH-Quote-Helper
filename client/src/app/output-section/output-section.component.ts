@@ -13,6 +13,9 @@ export class OutputSectionComponent implements OnInit {
   @Input() resultMesh: OutputItem;
   @Input() resultFta: OutputItem;
   @Input() resultCib: OutputItem;
+  @Input() resultTib: OutputItem;
+  @Input() resultFs: OutputItem;
+  @Input() resultMfw: OutputItem;
 
   constructor() { }
 
