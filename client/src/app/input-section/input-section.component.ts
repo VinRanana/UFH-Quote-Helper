@@ -16,8 +16,9 @@ export class InputSectionComponent implements OnInit {
   }
 
   onSubmit (value: InputData): void {
-    // console.log('input value', value);
+    // console.log(value);
     this.inputEvent.emit(value);
+    // console.log(value);
   }
 
 }

@@ -11,7 +11,7 @@ import { OutputItem } from '../output-item.model';
 export class OutputLineComponent implements OnInit {
 
   @Input() item: OutputItem;
-  
+
   clicked = false;
 
   constructor(private toastr: ToastrService) { }

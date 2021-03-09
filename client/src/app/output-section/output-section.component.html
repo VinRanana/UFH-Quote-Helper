@@ -5,11 +5,8 @@
     <div *ngIf="inputData?.floorArea > 0 && inputData?.floorSubstrate === 'Concrete'">
       <app-output-line [item]="resultFta"></app-output-line>
     </div>
-    <div *ngIf="inputData?.floorArea > 0 && inputData?.floorSubstrate === 'Concrete'">
-      <app-output-line [item]="resultCib"></app-output-line>
-    </div>
-    <div *ngIf="inputData?.floorArea > 0 && inputData?.floorSubstrate === 'Timber'">
-      <app-output-line [item]="resultTib"></app-output-line>
+    <div *ngIf="inputData?.floorSubstrate && inputData?.floorArea > 0">
+      <app-output-line [item]="resultBoard"></app-output-line>
     </div>
     <div *ngIf="inputData?.floorArea > 0 && inputData?.floorSubstrate === 'Timber'">
       <app-output-line [item]="resultFs"></app-output-line>

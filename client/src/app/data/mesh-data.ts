@@ -1,4 +1,4 @@
-import { OutputItem } from "../output-item.model";
+import { OutputItem } from '../output-item.model';
 
 
 interface Mesh {
@@ -19,7 +19,7 @@ function createMesh (name: string, area: number, intensity: number): Mesh {
     name,
     area,
     intensity
-  }
+  };
 }
 
 
@@ -43,13 +43,13 @@ export function determineRightMesh (meshObject: MeshCollection, heatedArea: numb
     name: '',
     quantity: 1,
     description: 'Self-adhesive mesh'
-  }
-  
+  };
+
   for (const key in meshObject) {
     if (Object.prototype.hasOwnProperty.call(meshObject, key)) {
       const currentMesh = meshObject[key];
       const meshArea = currentMesh.area;
-      
+
       if (meshArea > heatedArea) continue;
       if (meshArea === heatedArea) {
         resultItem.name = currentMesh.name;
@@ -58,7 +58,7 @@ export function determineRightMesh (meshObject: MeshCollection, heatedArea: numb
       if (currentMesh.area > bestFit.area) bestFit = currentMesh;
     }
   }
-  
+
   resultItem.name = bestFit.name;
   return resultItem;
 }
