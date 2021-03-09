@@ -25,7 +25,7 @@ export class OutputLineComponent implements OnInit {
     this.toastr.success(this.item.name, 'Copied to clipboard:', {
       positionClass: 'toast-top-right',
       easeTime: 150,
-      timeOut: 2000
+      timeOut: 1600
     });
   }
 

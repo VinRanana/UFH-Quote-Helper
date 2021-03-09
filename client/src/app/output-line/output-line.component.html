@@ -1,11 +1,13 @@
 <div class="level mt-1 mb-2">
   <div class="is-flex">
+<!-- use grid instead? -->
     <button
       (click)="onClick()"
       [style.border-color]="clicked ? '#EE3350' : 'none'"
       [style.color]="clicked ? '#EE3350' : 'inherit'"
       class="button is-light"
-      >{{item.name}}
+    >
+      {{item.name}}
     </button>
     <div class="level p-2 ml-3">x{{item.quantity}}</div>
   </div>

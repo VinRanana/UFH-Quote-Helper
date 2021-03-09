@@ -1,6 +1,7 @@
 import { OutputItem } from "../output-item.model";
 
-export interface Mesh {
+
+interface Mesh {
   name: string;
   area: number;
   intensity: number;
@@ -20,6 +21,7 @@ function createMesh (name: string, area: number, intensity: number): Mesh {
     intensity
   }
 }
+
 
 export const MESH_OBJ = mesh150Areas.reduce((resultObj: MeshCollection, mSquared: number): MeshCollection => {
   const mSquared100 = mSquared * 100;
