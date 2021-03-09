@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import * as copy from 'copy-to-clipboard';
 import { ToastrService } from 'ngx-toastr';
 import { OutputItem } from '../output-item.model';
@@ -8,16 +8,12 @@ import { OutputItem } from '../output-item.model';
   templateUrl: './output-line.component.html',
   styleUrls: ['./output-line.component.sass']
 })
-export class OutputLineComponent implements OnInit {
-
+export class OutputLineComponent {
   @Input() item: OutputItem;
 
   clicked = false;
 
   constructor(private toastr: ToastrService) { }
-
-  ngOnInit(): void {
-  }
 
   onClick (): void {
     copy(this.item.name);
@@ -28,5 +24,4 @@ export class OutputLineComponent implements OnInit {
       timeOut: 1600
     });
   }
-
 }

@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { InputData } from '../input-data.model';
 
 @Component({
@@ -6,19 +6,10 @@ import { InputData } from '../input-data.model';
   templateUrl: './input-section.component.html',
   styleUrls: ['./input-section.component.sass']
 })
-export class InputSectionComponent implements OnInit {
-
+export class InputSectionComponent {
   @Output() inputEvent = new EventEmitter<InputData>();
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
   onSubmit (value: InputData): void {
-    // console.log(value);
     this.inputEvent.emit(value);
-    // console.log(value);
   }
-
 }

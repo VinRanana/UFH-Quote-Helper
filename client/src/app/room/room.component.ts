@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { calculateQuantity, determineRightBoard } from '../data/insulation-data';
 import { determineRightMesh, MESH_OBJ } from '../data/mesh-data';
 import { InputData } from '../input-data.model';
@@ -9,7 +9,7 @@ import { OutputItem } from '../output-item.model';
   templateUrl: './room.component.html',
   styleUrls: ['./room.component.sass']
 })
-export class RoomComponent implements OnInit {
+export class RoomComponent {
 
   inputData: InputData = {
     floorArea: 0,
@@ -24,11 +24,6 @@ export class RoomComponent implements OnInit {
   resultMfw: OutputItem;
   resultMesh: OutputItem;
   // Can be refactored into an object?
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 
   updateData (value: InputData): void {
     this.inputData = value;

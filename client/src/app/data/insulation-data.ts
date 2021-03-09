@@ -15,9 +15,6 @@ export function determineRightBoard (
   floorSubstrate: string,
   insulationDepth: string
 ): OutputItem {
-  // console.log('floorArea', floorArea);
-  // console.log('floorSubstrate', floorSubstrate);
-  // console.log('insulationDepth', insulationDepth);
 
   const resultItem = {
     name: 'placeholder',
