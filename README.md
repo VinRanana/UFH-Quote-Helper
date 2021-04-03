@@ -5,7 +5,7 @@
 
 
 
-**An app that generates information needed for underfloor heating quotations**
+**An app that generates the information needed for underfloor heating quotations**
 
 Quoting customers for UFH can be time-consuming. Lots of formulas to calculate, and stock codes to refer to, and each project has its own unique parameters to take into consideration. This app will take all the unique info about a project, and then display the stock codes and quantities to be used for quoting purposes.
 
