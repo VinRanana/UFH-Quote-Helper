@@ -8,7 +8,7 @@ import { OutputItem } from '../output-item.model';
   styleUrls: ['./output-section.component.sass']
 })
 export class OutputSectionComponent {
-
+// input as an object instead of repetition
   @Input() inputData: InputData;
   @Input() resultMesh: OutputItem;
   @Input() resultFta: OutputItem;
