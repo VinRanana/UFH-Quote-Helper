@@ -1,71 +1,89 @@
 <div class="title is-4 has-text-grey-light">Specifications</div>
 <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
   <div class="flex-parent is-flex is-flex-direction-column pt-1 pr-2">
-<!-- floor area input -->
+    <!-- floor area input -->
     <div class="field is-horizontal">
       <div class="field-label is-normal">
         <label class="label">
           Floor area <span class="has-text-grey-light">(m<sup>2</sup>)</span>
         </label>
       </div>
-        <div class="field">
-          <div class="control">
-            <input type="number" step="0.1" min="1" max="999.9" 
-              class="input" name="floorArea" required ngModel/>
-          </div>
+      <div class="field">
+        <div class="control">
+          <input
+            type="number"
+            step="0.1"
+            min="1"
+            max="999.9"
+            class="input"
+            name="floorArea"
+            required
+            ngModel
+          />
         </div>
+      </div>
     </div>
-<!-- heated area input -->
+    <!-- heated area input -->
     <div class="field is-horizontal">
       <div class="field-label is-normal">
         <label class="label">
           Heated area <span class="has-text-grey-light">(m<sup>2</sup>)</span>
         </label>
       </div>
-        <div class="field">
-          <div class="control">
-            <input type="number" step="0.1" min="1" max="999.9"
-              class="input" name="heatedArea" required ngModel/>
-          </div>
+      <div class="field">
+        <div class="control">
+          <input
+            type="number"
+            step="0.1"
+            min="1"
+            max="999.9"
+            class="input"
+            name="heatedArea"
+            required
+            ngModel
+          />
         </div>
+      </div>
     </div>
-<!-- substrate input -->
+    <!-- substrate input -->
     <div class="field is-horizontal">
       <div class="field-label is-normal">
         <label class="label">Floor substrate</label>
       </div>
-        <div class="field">
-          <div class="control">
-            <div class="select is-multiple">
-              <select multiple size="2" name="floorSubstrate" required ngModel>
-                <option value="Concrete">Concrete</option>
-                <option value="Timber">Timber</option>
-              </select>
-            </div>
+      <div class="field">
+        <div class="control">
+          <div class="select is-multiple">
+            <select multiple size="2" name="floorSubstrate" required ngModel>
+              <option value="Concrete">Concrete</option>
+              <option value="Timber">Timber</option>
+            </select>
           </div>
         </div>
+      </div>
     </div>
-<!-- insulation input -->
+    <!-- insulation input -->
     <div class="field is-horizontal">
       <div class="field-label is-normal">
         <label class="label">Insulation depth</label>
       </div>
-        <div class="field">
-          <div class="control">
-            <div class="select is-multiple">
-              <select multiple size="2" name="insulationDepth" required ngModel>
-                <option value="six">6mm</option>
-                <option value="ten">10mm</option>
-              </select>
-            </div>
+      <div class="field">
+        <div class="control">
+          <div class="select is-multiple">
+            <select multiple size="2" name="insulationDepth" required ngModel>
+              <option value="six">6mm</option>
+              <option value="ten">10mm</option>
+            </select>
           </div>
         </div>
+      </div>
     </div>
-<!-- Make each input an instance of an input component -->
-<!-- submit button -->
+    <!-- Make each input an instance of an input component -->
+    <!-- submit button -->
     <div class="field is-align-self-flex-end">
       <div class="control">
-        <button class="button is-primary has-text-weight-bold">Calculate!</button>
+        <button class="button is-primary has-text-weight-bold">
+          Calculate
+        </button>
       </div>
     </div>
   </div>
